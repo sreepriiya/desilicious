@@ -1,0 +1,42 @@
+form {
+    margin: auto;
+    width: 300px;
+    margin-top:10%;
+    padding: 10px;
+    box-shadow: 10px 5px 10px 5px rgb(100, 95, 95);
+    text-align: center;
+  }
+  h1{
+    padding: 10px 20px 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+  #username, #password, button{
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #username::-webkit-input-placeholder, #password::-webkit-input-placeholder {
+    text-align: center;
+  }
+  input{
+    background-color: rgb(245, 241, 241);
+  }
+  input:hover{
+    background-color: rgb(177, 165, 165);
+  }
+  input::placeholder {
+    font-size: 18px;
+  }
+  button{
+    background-color: #00ff00;
+    font-weight: bold;
+    box-shadow: 5px 2px 5px 2px rgb(100, 95, 95);
+  }
+  button:hover{
+    background-color: #0ccd0c;
+  }
+
+}

@@ -1,0 +1,351 @@
+:root{
+    --green:#00ff00;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition:all .2s linear;
+}
+
+*::selection{
+    background:var(--green);
+    color:#fff
+
+}
+
+html{
+    font-size: 65.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body{
+    background: #f6f6f76;
+}
+
+header{
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #fff;
+    padding:2rem 9%;
+    box-shadow: 0 .1rem 1rem rgba(220, 49, 49, 0.1);
+}
+
+header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #666;
+}
+
+header .logo i{
+    padding-right: .5rem;
+    color:var(--green);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color:#666;
+
+}
+
+header .navbar a:hover{
+    color:var(--green);
+}
+
+
+
+.navbar a[href="#signin"],
+.navbar a[href="#login"] {
+    background-color: #333;
+    color: #fff; 
+    padding: 1px 1px; 
+    align-items: baseline;
+    border-radius: 20px; 
+    margin-left: 20px; 
+    text-decoration: none; 
+}
+
+.navbar a[href="#signin"]:hover,
+.navbar a[href="#login"]:hover {
+    background-color: #1b1616; /* Change the hover background color as desired */
+}
+
+
+
+header .icons i,
+header .icons a{
+     cursor: pointer;
+     margin-left: .5rem;
+     height: 4.5rem;
+     line-height: 4.5rem;
+     width: 4.5rem;
+     text-align: center;
+     font-size: 1.7rem;
+     color:var(--black);
+     border-radius: 50%;
+     background: #eee;
+}
+
+
+header .icons a:hover{
+    color:var(--green);
+}
+
+#search-form{
+    position: fixed;
+    top: -110%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1004;
+    background: rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+
+}
+
+#search-form.active{
+    top: 0;
+}
+
+#search-form #search-box{
+    width: 50rem;
+    border-bottom: .1rem solid #fff;
+    padding: 1rem 0;
+    color:#fff;
+    font-size: 3rem;
+    text-transfo rm: none;
+    background: none ;
+}
+
+#search-form #search-box::placeholder{
+    color: #eee;
+}
+
+#search-form #search-box ::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+
+}
+
+#search-form lable{
+    color:#fff;
+    cursor:pointer;
+    font-size: 3rem;
+}
+
+#search-form lable:hover{
+    color:var(--green);
+}
+
+#search-form #close{
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    top: 2rem; right: 3rem;
+    font-size: 5rem;
+}
+
+#contact-details {
+    display: none; /* Hide contact details by default */
+}
+
+#contact-details.show {
+    display: block; /* Show contact details when the link is clicked */
+}
+
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+   
+}
+
+/* Style for the photo */
+.photo {
+    flex: 1;
+    padding-top: 65px;
+    position: relative; /* Position relative is essential for positioning children elements */
+    width: 100%;
+
+}
+
+
+
+/* Style for the photo itself */
+img {
+    max-width: 1000%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+   
+}
+
+.text-overlay {
+    position: absolute; /* Position absolute to overlay the text on the image */
+    top: 50%; /* Adjust the vertical position */
+    left: 50%; /* Adjust the horizontal position */
+    transform: translate(-50%, -50%); /* Center the text both horizontally and vertically */
+    background-color: rgba(0, 0, 0, 0.7); /* Background color with opacity (adjust as needed) */
+    color: #fff; /* Text color */
+    padding: 10px; /* Add padding to the text */
+    border-radius: 5px; /* Add rounded corners to the text background */
+    font-size: 18px; /* Adjust the font size as needed */
+  
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.menu .box-container .box{
+    background: #fff;
+    border:.1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.menu .box-container .box .image{
+    height: 25rem;
+    width: 100%;
+    padding:1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.menu .box-container .box .image .fa-heart{
+    position: absolute;
+    top:2.5rem; right: 2.5rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    background: #fff;
+    border-radius: 50%;
+    color:var(--black);
+}
+
+.menu .box-container .box .image .fa-heart:hover{
+    background-color: var(--green);
+    color: #fff;
+}
+
+.menu .box-container .box .content{
+    padding:2rem;
+    padding-top: 0;
+}
+
+.menu .box-container .box .content .stars{
+    padding-bottom: 1rem ; 
+}
+
+.menu .box-container .box .content .stars i{
+    font-size: 1.7rem;
+    color:var(--green);
+}
+
+.menu .box-container .box .content h3{
+    color:var(--black);
+}
+
+.menu .box-container .box .content p{
+    color:var(--light-color);
+    font-size: 1.6rem;
+    padding:.5rem 0;
+    line-height: 1.5;
+}
+
+.menu .box-container .box .content .price{
+    color:var(--green);
+    margin-left: 1rem;
+    font-size: 2.5rem;
+}
+
+/* Style the "Contact Us" link with black text */
+#contact-link {
+    color: none; /* Black text color */
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    position: relative; /* Add relative positioning */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Add a dropdown symbol using the ::after pseudo-element */
+#contact-link::after {
+    content: "\25BC"; /* Unicode character for a down arrow */
+    margin-left: 5px; /* Add some spacing */
+    font-size: 12px; /* Reduce the size of the arrow symbol */
+}
+
+/* Change the text color to green on hover */
+#contact-link:hover {
+    color: #00ff00; /* Green text color on hover */
+}
+
+/* Style the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 40px;
+    left: 0;
+}
+
+/* Show the dropdown content when the "Contact Us" link is hovered over */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Styles for the contact details */
+#contact-details {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+#contact-details h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#contact-details p {
+    font-size: 14px;
+    margin: 5px 0;
+}
